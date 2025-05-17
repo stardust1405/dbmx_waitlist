@@ -95,7 +95,7 @@ export default function WaitlistForm() {
 									value={formData.email}
 									onChange={handleChange}
 									placeholder="Email"
-									className="flex-grow bg-background border border-border text-foreground px-4 py-3 rounded-[12] focus:outline-none focus:ring-1 focus:ring-[#e5ff00]"
+									className="flex-grow bg-background border border-border text-foreground px-4 py-3 rounded-[12]  focus:outline-1 transition-all duration-300 focus:outline-offset-4 focus:outline-[#e5ff00]"
 									disabled={loading}
 									required
 								/>
@@ -122,7 +122,7 @@ export default function WaitlistForm() {
 										value={formData.name}
 										onChange={handleChange}
 										placeholder="Name"
-										className="flex-grow bg-background border border-border text-foreground px-4 py-3 rounded-[12] focus:outline-none focus:ring-1 focus:ring-[#e5ff00]"
+										className="flex-grow bg-background border border-border text-foreground px-4 py-3 rounded-[12]  focus:outline-1 transition-all duration-300 focus:outline-offset-4 focus:outline-[#e5ff00]"
 										disabled={loading}
 										required
 									/>
