@@ -34,7 +34,7 @@ export default function Hero() {
 			<div className="flex items-center justify-center gap-2">
 				<People />
 			</div>
-			<Countdown period={new Date("2025-06-01")} />
+			<Countdown period={new Date("2025-12-31")} />
 		</div>
 	);
 }
