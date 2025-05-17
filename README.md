@@ -1,10 +1,10 @@
 <h1 align="center">Next.js + Notion Waitlist Template</h1>
 
-<p align="center">
+<p>
   Quickly launch a sleek waitlist page for your next project! This template leverages the power of Next.js 15, uses Notion as a simple CMS, incorporates Upstash Redis for rate limiting, and sends emails via Resend with your custom domain.
 </p>
 
-<p align="center">
+<p>
   <strong>Live Demo:</strong> <a href="https://waitly.idee8.agency" target="_blank" rel="noopener noreferrer">waitly.idee8.agency</a>
 </p>
 
@@ -129,7 +129,7 @@ To run this project on your local machine:
 
 ## License
 
-This template is open-source and available under the [MIT License](LICENSE.md) (assuming one exists or will be added). You are free to use, modify, and distribute it for personal or commercial projects.
+This template is open-source and available under the [MIT License](LICENSE.md). You are free to use, modify, and distribute it for personal or commercial projects.
 
 ## Support & Contributions
 
