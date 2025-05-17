@@ -146,7 +146,7 @@ export default function Countdown({
 						{timeLeft.days}
 					</motion.span>
 					<motion.span
-						className="text-xs uppercase tracking-wider mt-1"
+						className="text-xs uppercase tracking-wider mt-1 text-muted-foreground"
 						variants={itemVariants}
 					>
 						Days
@@ -154,7 +154,7 @@ export default function Countdown({
 				</motion.div>
 
 				<motion.span
-					className="text-lg md:text-xl lg:text-2xl pb-6"
+					className="text-lg md:text-xl lg:text-2xl pb-6 text-muted-foreground"
 					variants={itemVariants}
 				>
 					:
@@ -182,7 +182,7 @@ export default function Countdown({
 						{formatNumber(timeLeft.hours)}
 					</motion.span>
 					<motion.span
-						className="text-xs uppercase tracking-wider mt-1"
+						className="text-xs uppercase tracking-wider mt-1 text-muted-foreground"
 						variants={itemVariants}
 					>
 						Hours
@@ -190,7 +190,7 @@ export default function Countdown({
 				</motion.div>
 
 				<motion.span
-					className="text-lg md:text-xl lg:text-2xl pb-6"
+					className="text-lg md:text-xl lg:text-2xl pb-6 text-muted-foreground"
 					variants={itemVariants}
 				>
 					:
@@ -218,7 +218,7 @@ export default function Countdown({
 						{formatNumber(timeLeft.minutes)}
 					</motion.span>
 					<motion.span
-						className="text-xs uppercase tracking-wider mt-1"
+						className="text-xs uppercase tracking-wider mt-1 text-muted-foreground"
 						variants={itemVariants}
 					>
 						Minutes
@@ -226,7 +226,7 @@ export default function Countdown({
 				</motion.div>
 
 				<motion.span
-					className="text-lg md:text-xl lg:text-2xl pb-6"
+					className="text-lg md:text-xl lg:text-2xl pb-6 text-muted-foreground"
 					variants={itemVariants}
 				>
 					:
@@ -254,7 +254,7 @@ export default function Countdown({
 						{formatNumber(timeLeft.seconds)}
 					</motion.span>
 					<motion.span
-						className="text-xs uppercase tracking-wider mt-1"
+						className="text-xs uppercase tracking-wider mt-1 text-muted-foreground"
 						variants={itemVariants}
 					>
 						Seconds
@@ -279,6 +279,7 @@ export default function Countdown({
 					className="w-4 h-4 mr-1"
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
+					color="#7E7E7E"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
 					aria-hidden="true"

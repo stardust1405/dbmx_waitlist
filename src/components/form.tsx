@@ -72,7 +72,7 @@ export default function WaitlistForm() {
 				>
 					<button
 						onClick={resetForm}
-						className="bg-[#e5ff00] text-black px-6 py-2 rounded-md font-medium hover:bg-opacity-90 transition-all"
+						className="bg-[#e5ff00] text-black px-6 py-2 rounded-[12] font-semibold hover:bg-opacity-90 transition-all"
 						type="button"
 					>
 						Join with another email
@@ -95,13 +95,13 @@ export default function WaitlistForm() {
 									value={formData.email}
 									onChange={handleChange}
 									placeholder="Email"
-									className="flex-grow bg-background border border-border text-foreground px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-[#e5ff00]"
+									className="flex-grow bg-background border border-border text-foreground px-4 py-3 rounded-[12] focus:outline-none focus:ring-1 focus:ring-[#e5ff00]"
 									disabled={loading}
 									required
 								/>
 								<button
 									type="submit"
-									className="absolute right-0 top-0 bottom-0 bg-[#e5ff00] flex justify-center items-center cursor-pointer text-black px-6 py-3 m-1 rounded-md hover:bg-opacity-90 transition-all disabled:opacity-50"
+									className="absolute right-0 font-semibold top-0 bottom-0 bg-[#e5ff00] flex justify-center items-center cursor-pointer text-black px-5 py-2 m-2 rounded-[12] hover:bg-opacity-90 transition-all disabled:opacity-50"
 									disabled={loading}
 								>
 									Continue
@@ -122,13 +122,13 @@ export default function WaitlistForm() {
 										value={formData.name}
 										onChange={handleChange}
 										placeholder="Name"
-										className="flex-grow bg-background border border-border text-foreground px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-[#e5ff00]"
+										className="flex-grow bg-background border border-border text-foreground px-4 py-3 rounded-[12] focus:outline-none focus:ring-1 focus:ring-[#e5ff00]"
 										disabled={loading}
 										required
 									/>
 									<button
 										type="submit"
-										className="absolute right-0 top-0 bottom-0 bg-[#e5ff00] flex justify-center items-center cursor-pointer text-black px-6 py-3 m-1 rounded-md hover:bg-opacity-90 transition-all disabled:opacity-50"
+										className="absolute right-0 font-semibold top-0 bottom-0 bg-[#e5ff00] flex justify-center items-center cursor-pointer text-black px-5 py-2 m-2 rounded-[12] hover:bg-opacity-90 transition-all disabled:opacity-50"
 										disabled={loading}
 									>
 										{loading ? (
