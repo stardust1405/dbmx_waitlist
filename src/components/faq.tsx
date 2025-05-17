@@ -17,8 +17,12 @@ export default function Faq() {
 					questions.
 				</p>
 			</div>
-			<div className="w-full max-w-lg border border-border rounded-lg p-4">
-				<Accordion type="single" collapsible className="w-full gap-4">
+			<div className="w-full max-w-lg">
+				<Accordion
+					type="single"
+					collapsible
+					className="w-full flex flex-col gap-4"
+				>
 					<AccordionItem value="item-1">
 						<AccordionTrigger>
 							What's included in this template?

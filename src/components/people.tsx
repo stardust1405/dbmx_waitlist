@@ -71,7 +71,7 @@ export default function People({
 				{avatars.map((avatar, index) => (
 					<div
 						key={avatar.id}
-						className="w-8 h-8 rounded-full border-2 border-zinc-200 overflow-hidden"
+						className="w-8 h-8 rounded-full border-2 border-border overflow-hidden"
 					>
 						<img
 							src={avatar.src}

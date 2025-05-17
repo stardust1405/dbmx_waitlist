@@ -5,19 +5,21 @@ export default function Footer() {
 		<footer className="flex flex-col justify-center items-center gap-4 pb-4">
 			<div className="flex flex-row justify-between">
 				<ul className="flex flex-row gap-4">
-					<li>Built using Next.js 15</li>
-					<li>
+					<li className="dark:text-muted-foreground dark:hover:text-foreground cursor-pointer">
+						Built using Next.js 15
+					</li>
+					<li className="dark:text-muted-foreground dark:hover:text-foreground">
 						<Link href="https://github.com/idee8/nextjs-notion-waitlist">
 							Get this template
 						</Link>
 					</li>
-					<li>
+					<li className="dark:text-muted-foreground dark:hover:text-foreground cursor-pointer">
 						<Link href="https://kofi.com/idee8">Become a Sponsor</Link>
 					</li>
 				</ul>
 			</div>
 			<div>
-				<p>
+				<p className="text-sm text-muted-foreground">
 					&copy; {new Date().getFullYear()} Crafted by{" "}
 					<Link href="https://idee8.agency">Idee8</Link>
 				</p>
