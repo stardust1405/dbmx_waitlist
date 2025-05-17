@@ -24,10 +24,10 @@ export default function Faq() {
 					className="w-full flex flex-col gap-4"
 				>
 					<AccordionItem value="item-1">
-						<AccordionTrigger>
+						<AccordionTrigger className="hover:no-underline">
 							What's included in this template?
 						</AccordionTrigger>
-						<AccordionContent>
+						<AccordionContent className="text-muted-foreground">
 							This template is a comprehensive Next.js 15 starter kit designed
 							to help you build your next project quickly and efficiently. It
 							includes a range of features and components that you can use to
@@ -36,10 +36,10 @@ export default function Faq() {
 						</AccordionContent>
 					</AccordionItem>
 					<AccordionItem value="item-2">
-						<AccordionTrigger>
+						<AccordionTrigger className="hover:no-underline">
 							How do I get started with this template?
 						</AccordionTrigger>
-						<AccordionContent>
+						<AccordionContent className="text-muted-foreground">
 							To get started with this template, you can clone the repository
 							and install the dependencies using npm or yarn. Once you have the
 							dependencies installed, you can start the development server using
@@ -47,10 +47,10 @@ export default function Faq() {
 						</AccordionContent>
 					</AccordionItem>
 					<AccordionItem value="item-3">
-						<AccordionTrigger>
+						<AccordionTrigger className="hover:no-underline">
 							How do I customize the template to my needs?
 						</AccordionTrigger>
-						<AccordionContent>
+						<AccordionContent className="text-muted-foreground">
 							You can customize the template to your needs by modifying the
 							components and pages in the src directory. You can also add your
 							own components and pages to the src directory.
