@@ -4,6 +4,7 @@ import { cn } from "~/lib/utils";
 import { useScroll } from "~/hooks/use-scroll";
 import { GithubLogo, NotionLogo } from "./svgs";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Header() {
 	const scrolled = useScroll();
@@ -22,10 +23,17 @@ export default function Header() {
 			</Button>
 
 			<div className="flex items-center gap-2">
-				<Button variant="secondary">
-					<GithubLogo />
-					Use this template
-				</Button>
+				<Link
+					href="https://github.com/Idee8/Waitly"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="cursor-pointer"
+				>
+					<Button variant="secondary">
+						<GithubLogo />
+						Use this template
+					</Button>
+				</Link>
 			</div>
 		</header>
 	);
