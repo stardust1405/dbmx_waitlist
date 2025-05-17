@@ -16,7 +16,7 @@ This is a template repository for creating a waitlist using Next.js 15, Notion a
 
 The UI is built using Tailwind CSS.
 
-**Demo:** [https://waitlist.idee8.agency](https://waitlist.idee8.agency)
+**Demo:** [https://waitly.idee8.agency](https://waitly.idee8.agency)
 
 **Sample Database**: 
 
