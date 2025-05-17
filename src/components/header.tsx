@@ -20,10 +20,13 @@ export default function Header() {
 				<NotionLogo />
 				Notion DB Sample
 			</Button>
-			<Button variant="secondary">
-				<GithubLogo />
-				Use this template
-			</Button>
+
+			<div className="flex items-center gap-2">
+				<Button variant="secondary">
+					<GithubLogo />
+					Use this template
+				</Button>
+			</div>
 		</header>
 	);
 }

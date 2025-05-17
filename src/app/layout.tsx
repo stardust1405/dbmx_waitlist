@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from "~/components/header";
+import { ThemeProvider } from "~/providers/theme-provider";
 
 const geistMono = Geist_Mono({
 	variable: "--font-geist-mono",
@@ -26,12 +27,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="h-full">
+		<html lang="en" className="h-full" suppressHydrationWarning>
 			<body
 				className={`${interTight.variable} ${geistMono.variable} antialiased flex flex-col h-full`}
 			>
-				<Header />
-				{children}
+				<ThemeProvider>
+					<Header />
+					{children}
+				</ThemeProvider>
 			</body>
 		</html>
 	);

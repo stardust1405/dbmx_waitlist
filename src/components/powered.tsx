@@ -14,7 +14,7 @@ export default function Powered() {
 				<NotionLogo />
 				<ResendLogo />
 				<VercelLogo />
-				<NextjsLogo />
+				<NextjsLogo className="!dark:text-foreground" />
 				<UpstashLogo />
 			</div>
 		</div>
