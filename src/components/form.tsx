@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent, type ChangeEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { toast } from "sonner";
 
 export default function WaitlistForm() {
 	const [step, setStep] = useState<number>(1);
@@ -17,38 +18,98 @@ export default function WaitlistForm() {
 		setFormData((prev) => ({ ...prev, [name]: value }));
 	};
 
+	const isValidEmail = (email: string) => {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return emailRegex.test(email);
+	};
+
 	const handleSubmit = async (e: FormEvent) => {
 		e.preventDefault();
 
 		if (step === 1) {
-			// Validate email
-			if (!formData.email || !formData.email.includes("@")) {
-				alert("Please enter a valid email address");
+			if (!formData.email || !isValidEmail(formData.email)) {
+				toast.error("Please enter a valid email address");
 				return;
 			}
 
-			// Move to step 2
 			setStep(2);
 			return;
 		}
 
-		// Handle final submission
 		try {
 			setLoading(true);
 
-			// Here you would typically send data to your API
-			// Replace with your actual API endpoint
-			// const response = await fetch('/api/waitlist', {
-			//   method: 'POST',
-			//   headers: { 'Content-Type': 'application/json' },
-			//   body: JSON.stringify(formData),
-			// });
+			const promise = new Promise((resolve, reject) => {
+				const { name, email } = formData;
 
-			// For now, we'll simulate a successful submission
-			await new Promise((resolve) => setTimeout(resolve, 1000));
+				fetch("/api/mail", {
+					cache: "no-store",
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({ firstname: name, email }),
+				})
+					.then((mailResponse) => {
+						if (!mailResponse.ok) {
+							if (mailResponse.status === 429) {
+								reject("Rate limited");
+							} else {
+								reject("Email sending failed");
+							}
+							return null;
+						}
 
-			setSuccess(true);
-			setLoading(false);
+						return fetch("/api/notion", {
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+							},
+							body: JSON.stringify({ name, email }),
+						});
+					})
+					.then((notionResponse) => {
+						if (!notionResponse) return;
+
+						if (!notionResponse.ok) {
+							if (notionResponse.status === 429) {
+								reject("Rate limited");
+							} else {
+								reject("Notion insertion failed");
+							}
+						} else {
+							resolve({ name });
+						}
+					})
+					.catch((error) => {
+						reject(error);
+					});
+			});
+
+			toast.promise(promise, {
+				loading: "Getting you on the waitlist... 🚀",
+				success: (data) => {
+					setFormData({ email: "", name: "" });
+					return "Thank you for joining the waitlist 🎉";
+				},
+				error: (error) => {
+					if (error === "Rate limited") {
+						return "You're doing that too much. Please try again later";
+					}
+					if (error === "Email sending failed") {
+						return "Failed to send email. Please try again 😢.";
+					}
+					if (error === "Notion insertion failed") {
+						return "Failed to save your details. Please try again 😢.";
+					}
+					return "An error occurred. Please try again 😢.";
+				},
+			});
+
+			promise.finally(() => {
+				setSuccess(true);
+				setLoading(false);
+			});
 		} catch (error) {
 			console.error("Error submitting form:", error);
 			setLoading(false);
