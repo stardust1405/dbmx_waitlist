@@ -87,20 +87,6 @@ export default function Demo({
 
 						{/* Play button overlay */}
 						<div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-60">
-							{/* CRT/Glitch effect - colored ring around the play button */}
-							<div
-								className="absolute w-28 h-28 rounded-full opacity-30 animate-pulse"
-								style={{
-									background:
-										"radial-gradient(circle, transparent 60%, rgba(255,0,0,0.2) 65%, rgba(0,255,0,0.2) 70%, rgba(0,0,255,0.2) 75%, transparent 80%)",
-								}}
-							/>
-
-							{/* Ping animation ring */}
-							<div className="absolute w-20 h-20 rounded-full">
-								<span className="absolute inset-0 rounded-full bg-[#e5ff00] opacity-70 animate-ping" />
-							</div>
-
 							{/* Play button */}
 							<motion.button
 								onClick={handlePlayClick}

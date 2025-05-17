@@ -24,7 +24,7 @@ export default function Header() {
 
 			<div className="flex items-center gap-2">
 				<Link
-					href="https://github.com/Idee8/Waitly"
+					href="https://github.com/new?template_name=Waitly&template_owner=Idee8"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="cursor-pointer"
