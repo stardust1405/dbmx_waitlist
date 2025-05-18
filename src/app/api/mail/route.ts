@@ -1,4 +1,3 @@
-import { render } from "@react-email/components";
 import { Resend } from "resend";
 import { type NextRequest, NextResponse } from "next/server";
 import { Redis } from "@upstash/redis";
@@ -43,7 +42,7 @@ export async function POST(request: NextRequest) {
 		to: [email],
 		subject: "Welcome to Next.js + Notion CMS Waitlist",
 		replyTo: "hi@idee8.agency",
-		react: await render(WelcomeTemplate({ userFirstname: name })),
+		react: WelcomeTemplate({ userFirstname: name }),
 	});
 
 	if (error) {
