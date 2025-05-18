@@ -12,7 +12,7 @@ export default function Footer() {
             •
           </li>
           <li className="dark:text-muted-foreground dark:hover:text-foreground">
-            <Link href="https://github.com/idee8/nextjs-notion-waitlist">
+            <Link href="https://github.com/idee8/waitly">
               Get this template
             </Link>
           </li>
