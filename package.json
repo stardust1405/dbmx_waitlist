@@ -35,6 +35,7 @@
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
+		"prettier": "^3.5.3",
 		"react-mail": "^0.0.1",
 		"tailwindcss": "^4",
 		"tw-animate-css": "^1.3.0",

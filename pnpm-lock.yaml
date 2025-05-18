@@ -78,6 +78,9 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.1.5(@types/react@19.1.4)
+      prettier:
+        specifier: ^3.5.3
+        version: 3.5.3
       react-mail:
         specifier: ^0.0.1
         version: 0.0.1
