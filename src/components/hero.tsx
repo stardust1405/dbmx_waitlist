@@ -7,7 +7,7 @@ import People from "./people";
 import { Logo } from "./svgs";
 import Form from "./form";
 
-export default function Hero() {
+export default function Hero({ waitlistPeople }: { waitlistPeople: number }) {
   const year = useMemo(() => new Date().getFullYear(), []);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -39,7 +39,7 @@ export default function Hero() {
         <Form onSuccessChange={setIsSuccess} />
       </div>
       <div className="flex items-center justify-center gap-2">
-        <People />
+        <People count={waitlistPeople} />
       </div>
       <Countdown period={new Date("2025-12-31")} />
     </div>
