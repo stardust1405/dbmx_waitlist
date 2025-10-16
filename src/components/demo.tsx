@@ -68,7 +68,7 @@ export default function Demo({
 						<video
 							ref={videoRef}
 							poster={thumbnailSrc}
-							className="w-full h-full object-cover"
+							className="w-full h-full"
 							muted
 							aria-describedby="video-description"
 						>
@@ -90,7 +90,7 @@ export default function Demo({
 							{/* Play button */}
 							<motion.button
 								onClick={handlePlayClick}
-								className="relative w-16 h-16 bg-[#e5ff00] rounded-full flex items-center justify-center mb-4 z-10"
+								className="relative w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-4 z-10"
 								whileHover={{ scale: 1.1 }}
 								whileTap={{ scale: 0.95 }}
 								aria-label="Play video"
@@ -110,7 +110,7 @@ export default function Demo({
 							</motion.button>
 
 							{/* Text below the play button */}
-							<p className="text-gray-300 text-sm">See how wait works</p>
+							<p className="text-gray-300 text-sm">See how DBMX works</p>
 						</div>
 
 						{/* CRT scan lines effect */}
@@ -182,6 +182,7 @@ export default function Demo({
 									<video
 										ref={modalVideoRef}
 										src={videoSrc}
+										poster={thumbnailSrc}
 										className="w-full h-full"
 										controls
 										playsInline

@@ -13,7 +13,7 @@ export default function Faq() {
 					Frequently Asked Questions
 				</h2>
 				<p className="sm:text-base text-sm text-muted-foreground text-center">
-					Everything you need to know about the template. Find answers to common
+					Everything you need to know about DBMX. Find answers to common
 					questions.
 				</p>
 			</div>
@@ -23,37 +23,23 @@ export default function Faq() {
 					collapsible
 					className="w-full flex flex-col gap-4"
 				>
-					<AccordionItem value="item-1">
-						<AccordionTrigger className="hover:no-underline">
-							What's included in this template?
-						</AccordionTrigger>
-						<AccordionContent className="text-muted-foreground">
-							This template is a comprehensive Next.js 15 starter kit designed
-							to help you build your next project quickly and efficiently. It
-							includes a range of features and components that you can use to
-							get started, including a responsive design, a dark mode toggle,
-							and a form component.
-						</AccordionContent>
-					</AccordionItem>
 					<AccordionItem value="item-2">
 						<AccordionTrigger className="hover:no-underline">
-							How do I get started with this template?
+							Where are my connection strings stored?
 						</AccordionTrigger>
 						<AccordionContent className="text-muted-foreground">
-							To get started with this template, you can clone the repository
-							and install the dependencies using npm or yarn. Once you have the
-							dependencies installed, you can start the development server using
-							npm run dev or yarn dev.
+							Your connection strings are stored in your desktop app's local
+							storage which is powered by SQLite3. They are not sent to any server.
 						</AccordionContent>
 					</AccordionItem>
-					<AccordionItem value="item-3">
+
+					<AccordionItem value="item-1">
 						<AccordionTrigger className="hover:no-underline">
-							How do I customize the template to my needs?
+							What databases are supported?
 						</AccordionTrigger>
 						<AccordionContent className="text-muted-foreground">
-							You can customize the template to your needs by modifying the
-							components and pages in the src directory. You can also add your
-							own components and pages to the src directory.
+							DBMX currently supports PostgreSQL, MongoDB, ClickHouse and MySQL. We are
+							working on adding support for more databases.
 						</AccordionContent>
 					</AccordionItem>
 				</Accordion>

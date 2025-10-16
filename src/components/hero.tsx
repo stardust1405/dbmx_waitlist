@@ -8,7 +8,7 @@ import { Logo } from "./svgs";
 import Form from "./form";
 
 export default function Hero({ waitlistPeople }: { waitlistPeople: number }) {
-  const year = useMemo(() => new Date().getFullYear(), []);
+  const year = useMemo(() => new Date().getFullYear() + 1, []);
   const [isSuccess, setIsSuccess] = useState(false);
 
   return (
@@ -26,13 +26,14 @@ export default function Hero({ waitlistPeople }: { waitlistPeople: number }) {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center gap-2 max-w-2xl">
-        <h2 className="text-4xl font-bold text-foreground">
+        <h2 className="text-4xl font-bold text-foreground">AI Native Database Management Tool</h2>
+        <h2 className="text-3xl text-foreground">
           {isSuccess ? "You're on the waitlist" : "Get early Access"}
         </h2>
         <p className="text-base text-muted-foreground text-center max-w-md">
           {isSuccess
             ? "You've successfully secured your spot.We’ll hit you up the moment it’s your turn to dive in"
-            : "Be among the first to experience the future of AI-powered productivity. Join the waitlist to get notified when we launch."}
+            : "Be among the first to experience the future of Database Management. Join the waitlist to get notified when we launch."}
         </p>
       </div>
       <div className="flex flex-col items-center justify-center gap-2 w-full max-w-md">
@@ -41,7 +42,7 @@ export default function Hero({ waitlistPeople }: { waitlistPeople: number }) {
       <div className="flex items-center justify-center gap-2">
         <People count={waitlistPeople} />
       </div>
-      <Countdown period={new Date("2025-12-31")} />
+      <Countdown period={new Date("2026-01-01")} />
     </div>
   );
 }
