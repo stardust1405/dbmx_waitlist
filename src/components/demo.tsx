@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { YouTubeEmbed } from '@next/third-parties/google'
 
 interface DemoProps {
 	videoSrc: string;
@@ -90,7 +91,7 @@ export default function Demo({
 							{/* Play button */}
 							<motion.button
 								onClick={handlePlayClick}
-								className="relative w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-4 z-10"
+								className="relative w-16 h-16 bg-yellow-300 rounded-full flex items-center justify-center mb-4 z-10"
 								whileHover={{ scale: 1.1 }}
 								whileTap={{ scale: 0.95 }}
 								aria-label="Play video"
@@ -179,7 +180,9 @@ export default function Demo({
 
 								{/* Video player */}
 								<div className="w-full aspect-video bg-black rounded-lg overflow-hidden">
-									<video
+									<YouTubeEmbed videoid="Djh-9sSi68c" params="controls=1,autoplay=1" />
+
+									{/* <video
 										ref={modalVideoRef}
 										src={videoSrc}
 										poster={thumbnailSrc}
@@ -196,7 +199,7 @@ export default function Demo({
 											default
 										/>
 										Your browser does not support the video tag.
-									</video>
+									</video> */}
 								</div>
 							</motion.div>
 						</motion.div>

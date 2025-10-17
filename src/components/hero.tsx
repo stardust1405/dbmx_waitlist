@@ -12,8 +12,8 @@ export default function Hero({ waitlistPeople }: { waitlistPeople: number }) {
   const [isSuccess, setIsSuccess] = useState(false);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-6">
-      <div className="flex flex-col items-center justify-center mb-6">
+    <div className="flex flex-col items-center justify-center gap-4">
+      <div className="flex flex-col items-center justify-center mb-2">
         <Logo className="" />
         <div className="flex items-center gap-4 rounded-full border border-border px-4 py-1 relative">
           <span className="relative flex h-2 w-2">
@@ -25,8 +25,8 @@ export default function Hero({ waitlistPeople }: { waitlistPeople: number }) {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-2 max-w-2xl">
-        <h2 className="text-4xl font-bold text-foreground">AI Native Database Management Tool</h2>
+      <div className="flex flex-col items-center justify-center gap-4 max-w-2xl">
+        <h2 className="text-4xl font-bold text-foreground text-center">AI Native Database Management Tool</h2>
         <h2 className="text-3xl text-foreground">
           {isSuccess ? "You're on the waitlist" : "Get early Access"}
         </h2>
