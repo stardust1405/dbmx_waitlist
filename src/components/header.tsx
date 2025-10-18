@@ -35,7 +35,7 @@ export default function Header() {
 				>
 					<Button variant="secondary">
 						<GithubLogo />
-						<span className="sr-only">⭐️ GitHub</span>
+						We're Open Source
 					</Button>
 				</Link>
 			</div>
