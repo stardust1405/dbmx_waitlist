@@ -3,7 +3,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import { Redis } from "@upstash/redis";
 import { Ratelimit } from "@upstash/ratelimit";
 
-import WelcomeTemplate from "~/emails";
+import WaitlistEmail from "~/emails";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -40,8 +40,8 @@ export async function POST(request: NextRequest) {
 	const { data, error } = await resend.emails.send({
 		from: process.env.RESEND_FROM_EMAIL || "",
 		to: [email],
-		subject: "Welcome to Next.js + Notion CMS Waitlist",
-		react: WelcomeTemplate({ userFirstname: name }),
+		subject: "You're on the DBMX waitlist!",
+		react: WaitlistEmail({ userFirstname: name }),
 	});
 
 	if (error) {
