@@ -19,7 +19,7 @@ export default function Demo({
 
 	return (
 		<div className="py-14 sm:px-0">
-			<div className="bg-muted/40 rounded-xl w-184 pb-2 mx-auto">
+			<div className="bg-muted/40 rounded-xl w-full max-w-184 pb-2 mx-auto">
 				<div className="flex flex-row justify-start items-center gap-2 p-2">
 					<span className="relative flex h-3 w-3">
 						<span className="absolute inline-flex h-full w-full rounded-full bg-background bg-red-500" />
@@ -32,7 +32,7 @@ export default function Demo({
 					</span>
 				</div>
 				<div
-					className={`relative w-180 h-full mx-auto rounded-lg overflow-hidden ${className}`}
+					className={`relative w-full h-full px-2 mx-auto rounded-lg overflow-hidden ${className}`}
 				>
 					{/* Glitch effect container */}
 					<div className="aspect-video w-full h-full bg-black justify-center items-center rounded-lg overflow-hidden">
