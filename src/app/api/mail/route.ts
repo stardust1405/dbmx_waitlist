@@ -35,13 +35,13 @@ export async function POST(request: NextRequest) {
 		return NextResponse.json({ error: "Too many requests!" }, { status: 429 });
 	}
 
-	const { email, name } = await request.json();
+	const { email, firstname } = await request.json();
 
 	const { data, error } = await resend.emails.send({
 		from: process.env.RESEND_FROM_EMAIL || "",
 		to: [email],
 		subject: "You're on the DBMX waitlist!",
-		react: WaitlistEmail({ userFirstname: name }),
+		react: WaitlistEmail({ userFirstname: firstname }),
 	});
 
 	if (error) {
